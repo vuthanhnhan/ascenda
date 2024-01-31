@@ -1,3 +1,2 @@
-database/journal/*
 __pycache__/*
-database/diagnostic.data/*
+/database/*
