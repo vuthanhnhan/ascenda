@@ -82,11 +82,16 @@ Operational overhead in deploying and maintaining MongoDB.
 
 ### Potential Improvements
 1. **Architect improvement**
-- Implement logic to update MongoDB data when a request is made, comparing with supplier data. This method **take more resources and slower** if we not implement the comparison in the background and lead to high load when many people request at the same time (not recommend this method)
 
-- Set up a cronjob to periodically check and update MongoDB data. (set suitable interval of cronjob)
+      We can stay up to date with the suppliers' data by implements one of the following methods, ranked from high to low priority:
 
 - Establish communication with suppliers to receive webhook updates.
+
+- Set up a cronjob to periodically check and update MongoDB data. (set suitable interval of cronjob).
+
+- Implement logic to update MongoDB data when a request is made, comparing with supplier data. This method **take more resources and slower** if we not implement the comparison in the background and lead to high load when many people request at the same time (not recommend this method)
+
+
 
 2. **Data Merge Improvements**
 
@@ -104,4 +109,4 @@ Operational overhead in deploying and maintaining MongoDB.
 
 ### Contributors
 
-  - Vu Thanh Nhan
+  - Nhan Vu Thanh
