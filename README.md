@@ -46,7 +46,7 @@ Please make sure that your Docker containers or development servers are running 
 
 For a visual walkthrough of the new features and enhancements introduced in this release, I have prepared a demonstration video.
 
-[Watch the Demonstration Video]()
+[Watch the Demonstration Video](https://youtu.be/Ud7xk8Ji4Yk)
 
 ## Requirements
 ### Endpoint
