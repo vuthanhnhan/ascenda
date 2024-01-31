@@ -107,6 +107,9 @@ Operational overhead in deploying and maintaining MongoDB.
   - Implement a distributed system for global scalability.
   - Utilize GraphQL to optimize data retrieval by removing unnecessary fields.
 
+### Reference for data fusion
+Bleiholder, J., & Naumann, F. (2008). Data Fusion. Hasso-Plattner-Institut.
+
 ### Contributors
 
   - Nhan Vu Thanh
