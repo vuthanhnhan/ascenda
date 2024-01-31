@@ -155,7 +155,7 @@ class HotelRepository:
             condition['destination_id'] = destination_id
 
         results = await hotel_model.get_all_by_condition(condition)
-        if results is None:
+        if results is None or not len(results):
             results = await self.__get_hotel_by_suppliers(hotel_ids, destination_id)
             if len(results):
                 await hotel_model.save_many(results)
