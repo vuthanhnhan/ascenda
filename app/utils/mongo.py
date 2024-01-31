@@ -36,3 +36,6 @@ class BaseModel:
             return results
         else:
             return None
+
+    async def delete_all(self):
+        await self.collection.delete_many({})

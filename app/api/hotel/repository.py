@@ -107,7 +107,7 @@ class HotelRepository:
             patagonia_hotel = [h for h in patagonia_hotel if h['id'] in hotel_ids]
             paperflies_hotel = [h for h in paperflies_hotel if h['hotel_id'] in hotel_ids]
 
-            # @Todo: Handle case if len(hotel) > 1 then log to check the supplier
+            # @Todo: Handle case if len(hotel) > 1 for 1 specific hotel then log to check the supplier
 
             
         if destination_id is not None:
@@ -169,5 +169,6 @@ class HotelRepository:
     async def init_fetch_all_hotels(self):
         all_hotels = await self.__get_hotel_by_suppliers()
         if len(all_hotels):
-                await hotel_model.save_many(all_hotels)
+            await hotel_model.delete_all()
+            await hotel_model.save_many(all_hotels)
 
