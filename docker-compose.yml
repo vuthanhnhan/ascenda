@@ -17,6 +17,8 @@ services:
       interval: 10s
       timeout: 1s
       retries: 3
+    depends_on:
+      - db
 
   db:
     image: mongo
