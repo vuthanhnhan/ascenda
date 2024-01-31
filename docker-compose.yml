@@ -12,6 +12,11 @@ services:
       - "5678:5678"
     env_file:
       - app/.env
+    healthcheck:
+      test: ["CMD", "sh", "-c", "curl -s -f http://localhost:8000/ || exit 1"]
+      interval: 10s
+      timeout: 1s
+      retries: 3
 
   db:
     image: mongo

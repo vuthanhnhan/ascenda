@@ -165,3 +165,9 @@ class HotelRepository:
 
 
         return results
+    
+    async def init_fetch_all_hotels(self):
+        all_hotels = await self.__get_hotel_by_suppliers()
+        if len(all_hotels):
+                await hotel_model.save_many(all_hotels)
+
